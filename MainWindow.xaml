@@ -32,16 +32,20 @@
         </Menu>
         <ToolBarTray Grid.Row="0" Margin="0,33,0,323" Grid.RowSpan="2">
             <ToolBar Margin="5" Padding="5">
-                <ComboBox Margin="5" Padding="5" SelectedIndex="0" Width="200" SelectionChanged="ComboBox_SelectionChanged">
-                    <TextBlock Text="Arial"/>
-                    <TextBlock Text="Times New Roman"/>
-                    <TextBlock Text="Verdana"/>
-                </ComboBox>
-                <ComboBox Margin="5" Padding="5" SelectedIndex="2" Width="50" SizeChanged="ComboBox_SizeChanged">
-                    <TextBlock Text="12"/>
-                    <TextBlock Text="14"/>
-                    <TextBlock Text="16"/>
-                </ComboBox>
+                <ComboBox Margin="5" 
+                          Padding="5" 
+                          SelectedIndex="0" 
+                          Width="200" 
+                          SelectionChanged="ComboBox_SelectionChanged"
+                          ItemsSource="{StaticResource fonts}"/>
+
+                <ComboBox Margin="5" 
+                          Padding="5" 
+                          SelectedIndex="2" 
+                          Width="50" 
+                          SizeChanged="ComboBox_SizeChanged_1"
+                          ItemsSource="{StaticResource sizes}"/>
+
             </ToolBar>
             <ToolBar Margin="5" Padding="5">
                 <ToggleButton Click="Button_Click">
@@ -60,7 +64,7 @@
             <ToolBar Margin="5" Padding="5">
                 <StackPanel VerticalAlignment="Center">
                     <RadioButton Content="Черный" IsChecked="True" Checked="RadioButton_Checked"/>
-                    <RadioButton Content="Красный" Checked="RadioButton_Checked" Click="RadioButton_Click"/>
+                    <RadioButton Content="Красный" Checked="RadioButton_Checked" Click="RadioButton_Click" Foreground="#FFE81C1C"/>
                 </StackPanel>
                 
             </ToolBar>
