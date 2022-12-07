@@ -49,15 +49,15 @@
             </ToolBar>
             <ToolBar Margin="5" Padding="5">
                 <ToggleButton Click="Button_Click">
-                    <Image Source="WpfApp1/text_bold.png"/>
+                    <Image Source="text_bold.png"/>
                 </ToggleButton>
                 <Separator/>
                 <ToggleButton Click="Button_Click_1">
-                    <Image Source="WpfApp1/text_italik.png"/>
+                    <Image Source="text_italik.png"/>
                 </ToggleButton>
                 <Separator/>
                 <ToggleButton Click="ToggleButton_Click">
-                    <Image Source="WpfApp1/text_under.png"/>
+                    <Image Source="text_under.png"/>
                 </ToggleButton>
                 <Separator/>
             </ToolBar>
@@ -66,7 +66,13 @@
                     <RadioButton Content="Черный" IsChecked="True" Checked="RadioButton_Checked"/>
                     <RadioButton Content="Красный" Checked="RadioButton_Checked" Click="RadioButton_Click" Foreground="#FFE81C1C"/>
                 </StackPanel>
-                
+                <ComboBox Name="themes" 
+                          Width="150" 
+                          SelectedIndex="0" 
+                          Margin="5" SelectionChanged="themes_SelectionChanged">
+                    <TextBlock Text="Светлая"/>
+                    <TextBlock Text="Темная"/>
+                </ComboBox>
             </ToolBar>
         </ToolBarTray>
         <TextBox x:Name="textBox" Grid.Row="1" Margin="0,47,0,5" Padding="5" FontSize="16" FontFamily="Arial" TextWrapping="Wrap"/>
